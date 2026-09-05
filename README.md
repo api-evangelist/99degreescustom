@@ -64,5 +64,32 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-99degrees Custom is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/99degreescustom
+99Degrees (99Degrees Custom, Inc.) is a Lawrence, Massachusetts contract apparel manufacturer
+founded in 2013 by Brenna Nan Schneider, operating out of the historic Everett Mills. It produces
+performance activewear, workwear, uniforms and technology-integrated apparel for global and
+growth-stage brands, and runs an R&D operation focused on Design for Manufacturing, rapid
+prototyping and applied research — including integrating sensors, electronics, robotics and
+hardware into textiles for wearable medical and industrial safety products.
+
+**There is no API surface to catalog.** 99Degrees is a physical-goods manufacturer, not a software
+company, and no source — live or archived — shows it ever published a developer program, public
+API, SDK, webhook surface, or machine-readable specification. It has no GitHub organization and no
+packages on npm or PyPI.
+
+**The company no longer controls its own domain.** `99degreescustom.com` lapsed and was
+re-registered on 2026-05-24 through the broker Domainsinthebag.com LLC; it now sits on NamePros
+brokerage name servers and serves a "99degreescustom.com for sale" parking lander. That lander is a
+soft-200 catch-all — `/llms.txt`, `/robots.txt` and `/news` all return HTTP 200 with the same
+for-sale HTML — while every `/.well-known/` path returns 404 (a negative-control path also returns
+404, so the host does not echo paths). Wildcard DNS points `api.`, `developer.`, `docs.`, `app.`
+and every other subdomain at the same parking IP. None of it is a 99Degrees surface, so no
+`Website`, `WellKnown`, `LLMsTxt`, `AgentCard` or contract pointer is emitted from it.
+
+No bankruptcy, dissolution, or closure filing was located, so the `defunct` status here is a
+domain-loss finding rather than a confirmed corporate wind-down.
+
+The full probe record, with every URL and the status it returned, is in
+[`well-known/99degreescustom-well-known.yml`](well-known/99degreescustom-well-known.yml).
+
+Harvest source (a secondary-market share listing, not a company website):
+- https://equityzen.com/company/99degreescustom/

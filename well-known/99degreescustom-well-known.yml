@@ -1,0 +1,155 @@
+generated: '2026-09-05'
+method: probed
+source: https://99degreescustom.com/
+name: 99Degrees well-known + contract discovery probe
+description: >-
+  Negative probe record for 99Degrees (99Degrees Custom, Inc.). The company's canonical
+  host 99degreescustom.com is no longer controlled by the company: the domain lapsed and
+  was re-registered on 2026-05-24 through the broker Domainsinthebag.com LLC, and it now
+  resolves to NamePros name servers serving a "99degreescustom.com for sale" parking
+  lander. The lander is a soft-200 catch-all for ordinary paths (it answered 200 with the
+  same ~941-949 byte for-sale HTML for /llms.txt, /robots.txt and /news) while returning a
+  real 404 for every /.well-known/* path. NONE of those 200s is a document. No WellKnown,
+  SecurityTxt, LLMsTxt, AgentCard or OpenAPI pointer is emitted from this probe, and none
+  should be emitted from it in a later round.
+
+host_status:
+  host: 99degreescustom.com
+  controlled_by_provider: false
+  disposition: parked-for-sale
+  registrar: Domainsinthebag.com LLC
+  domain_created: '2026-05-24'
+  domain_updated: '2026-08-30'
+  domain_expires: '2027-05-24'
+  nameservers:
+  - NS1.NAMEPROS-DNS.COM
+  - NS2.BROKERAGE.NS.NAMEPROS-DNS.IS
+  wildcard_dns: true
+  wildcard_note: >-
+    api., developer., developers., docs., dev., app., portal., shop. and store.
+    99degreescustom.com all resolve to the same parking IP 3.233.30.191 as the apex.
+    None of them is a company surface.
+  note: >-
+    The creation date is a RE-registration by a domain broker, not the company's original
+    registration. The last archived live snapshot of the real 99Degrees site is
+    2024-10-01 (web.archive.org). 99degrees.com is likewise a GoDaddy for-sale lander and
+    was never confirmed as a 99Degrees host.
+
+soft_200_catch_all: true
+soft_200_note: >-
+  Ordinary paths return HTTP 200 with the parking lander HTML (title
+  "99degreescustom.com for sale", iframe to namepros.com/parked). /.well-known/* paths
+  return a real 404, so there is no path-echo behaviour.
+path_echo_control: passed
+negative_control:
+  url: https://99degreescustom.com/.well-known/99degreescustom-negative-control-7f3ab91c.json
+  status: 404
+  note: A path that cannot exist correctly returned 404 — this host does not echo paths.
+
+hit_count: 0
+
+hosts:
+- host: 99degreescustom.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+  - {path: /.well-known/agent.json, status: 404, file: null}
+- host: www.99degreescustom.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+  - {path: /.well-known/agent.json, status: 404, file: null}
+
+contract_discovery:
+  openapi:
+  - {url: 'https://99degreescustom.com/openapi.json', status: 404, parses_as_openapi: false, result: miss}
+  - {url: 'https://99degreescustom.com/swagger.json', status: 404, parses_as_openapi: false, result: miss}
+  - {url: 'https://www.99degreescustom.com/openapi.json', status: 404, parses_as_openapi: false, result: miss}
+  - {url: 'https://www.99degreescustom.com/swagger.json', status: 404, parses_as_openapi: false, result: miss}
+  graphql: []
+  mcp: []
+  a2a_agent_card:
+  - {url: 'https://99degreescustom.com/.well-known/agent-card.json', status: 404, result: miss}
+  - {url: 'https://99degreescustom.com/.well-known/agent.json', status: 404, result: miss}
+  - {url: 'https://www.99degreescustom.com/.well-known/agent-card.json', status: 404, result: miss}
+  - {url: 'https://www.99degreescustom.com/.well-known/agent.json', status: 404, result: miss}
+  ogc: []
+  ogc_note: >-
+    No evidence anywhere in the record points at an OGC/geospatial surface, so no blind
+    OGC path probing was performed.
+  wsdl: []
+  wsdl_note: No SOAP/enterprise integration surface is named in any source for this company.
+  api_hosts_resolved:
+  - {host: api.99degreescustom.com, dns: 3.233.30.191, status: parking-wildcard}
+  - {host: developer.99degreescustom.com, dns: 3.233.30.191, status: parking-wildcard}
+  - {host: docs.99degreescustom.com, dns: 3.233.30.191, status: parking-wildcard}
+  - {host: app.99degreescustom.com, dns: 3.233.30.191, status: parking-wildcard}
+
+llms_txt:
+  url: https://99degreescustom.com/llms.txt
+  status: 200
+  content_type: text/html
+  bytes: 941
+  is_real_llms_txt: false
+  note: >-
+    The parking lander's catch-all HTML, titled "99degreescustom.com for sale". Not an
+    llms.txt (no H1, no link sections, not text/plain). Recorded as a MISS. No LLMsTxt
+    pointer emitted.
+
+sitemap:
+  url: https://99degreescustom.com/sitemap.xml
+  status: 404
+
+other_surfaces:
+- {what: GitHub organization, url: 'https://api.github.com/orgs/99degreescustom', status: 404, result: miss}
+- {what: GitHub organization, url: 'https://api.github.com/orgs/99degrees', status: 404, result: miss}
+- what: GitHub repository search "99degrees apparel"
+  url: https://api.github.com/search/repositories?q=99degrees+apparel
+  status: 200
+  result: miss
+  note: total_count 0 — no first-party repositories.
+- what: npm registry search "99degrees"
+  url: https://registry.npmjs.org/-/v1/search?text=99degrees
+  status: 200
+  result: miss
+  note: total 0 — no first-party packages.
+- {what: 'PyPI package "99degrees"', url: 'https://pypi.org/pypi/99degrees/json', status: 404, result: miss}
+- what: EquityZen secondary-market listing (the harvest source)
+  url: https://equityzen.com/company/99degreescustom/
+  status: 200
+  result: venue-listing
+  note: >-
+    A secondary-market share listing, not a company website. Deliberately NOT wired as a
+    Website pointer (roadmap#56).
+- what: 99degrees.com (candidate alternate host)
+  url: https://99degrees.com/
+  status: 200
+  result: miss
+  note: >-
+    Redirects to a GoDaddy forsale lander (Access Denied to non-browser clients at
+    /lander). Never confirmed as a 99Degrees host in any source.
+
+domain_security_probe: skipped
+domain_security_note: >-
+  probe-domain-security.py was deliberately not run. The only host in the record is a
+  broker-owned parking domain; its TLS/HSTS/SPF/DMARC posture belongs to the parking
+  operator, not to 99Degrees, and recording it would attribute another party's security
+  configuration to this company.
+
+conclusion: >-
+  99Degrees is a contract apparel manufacturer — a physical-goods business — and no
+  source, live or archived, shows it ever operated a developer program, public API, SDK,
+  webhook surface or machine-readable specification. It also no longer controls its own
+  domain. There is no API surface to enrich; this is a historical record, not a thin
+  profile. Any future round should re-read host_status before probing 99degreescustom.com
+  again.
